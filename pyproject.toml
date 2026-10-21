@@ -24,7 +24,9 @@ classifiers = [
 dependencies = [
     "cdp-use==1.4.5",
     "fetch-use==0.4.0",
-    "pillow==12.3.0",
+    # Relaxed from the exact 12.3.0 pin: Pillow 13.0.0 fixes the CVE-2026-1123xx
+    # series, and this package works with it. Upstream keeps ==12.3.0.
+    "pillow>=12.3.0",
     "websockets==15.0.1",
 ]
 
